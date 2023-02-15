@@ -12,12 +12,8 @@ font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
-.main {
-  display: none;
-}
 /* || header-styles || */
 .header {
-  display: none;
   height: 100%;
   padding-bottom: 2rem;
   font-family: "Lexend", sans-serif;
@@ -141,13 +137,15 @@ font-family: "Work Sans", sans-serif;
   gap: 1.5rem;
 }
 .main-experience-details > h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   border-left: 5px solid #ff900e;
   padding-left: 1.5rem;
 }
 .main-experience-details > p {
   line-height: 1.5rem;
-  width: 80%;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  width: 100%;
 }
 .main-experience-architect {
   display: flex;
@@ -237,10 +235,10 @@ font-family: "Work Sans", sans-serif;
   font-size: 1.2rem;
 }
 
-/* || main-styles || */
+/* || sponsors-styles || */
 .main-sponsors {
   width: 75%;
-  margin: 3rem auto;
+  margin: 7rem auto;
   text-align: center;
   font-family: "Lexend", sans-serif;
 }
@@ -249,6 +247,7 @@ font-family: "Work Sans", sans-serif;
 }
 .main-sponsors p {
   font-size: 1.2rem;
+  opacity: 0.8;
   line-height: 1.5rem;
   margin: 2rem 0 3rem;
 }
@@ -256,6 +255,19 @@ font-family: "Work Sans", sans-serif;
   display: flex;
   filter: grayscale(100%);
   justify-content: space-around;
+}
+
+/* || footer-styles || */
+.footer {
+  font-family: "Lexend", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  border-radius: 5px;
+  width: 50%;
+  padding: 1rem 0.5rem;
+  background-color: #fff4e7;
 }
 
 /* || @media for Mobile-Device || */
@@ -266,10 +278,6 @@ font-family: "Work Sans", sans-serif;
     text-align: center;
     gap: 10px;
     align-items: center;
-  }
-  .header-nav ul {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgb(202, 202, 202);
   }
   .header-nav span {
     font-size: 2.2rem;
@@ -314,6 +322,9 @@ font-family: "Work Sans", sans-serif;
     flex-direction: column-reverse;
     width: 80%;
   }
+  .main-experience-details > h3 {
+    font-size: 2rem;
+  }
   .main-experience-details > p {
     width: 100%;
   }
@@ -323,7 +334,7 @@ font-family: "Work Sans", sans-serif;
   }
   .main-exp-float {
     left: -66px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     transform: scale(0.75);
   }
 
@@ -341,10 +352,17 @@ font-family: "Work Sans", sans-serif;
     margin-top: 2rem;
   }
 
-  /* || main-styles (@media) || */
+  /* || sponsors-styles (@media) || */
   .main-sponsors-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  /* || footer-styles (@media) || */
+  .footer {
+    text-align: center;
+    line-height: 1.5rem;
+    width: 80%;
   }
 }
