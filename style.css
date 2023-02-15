@@ -12,9 +12,12 @@ font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
-
+.main {
+  display: none;
+}
 /* || header-styles || */
 .header {
+  display: none;
   height: 100%;
   padding-bottom: 2rem;
   font-family: "Lexend", sans-serif;
@@ -176,7 +179,7 @@ font-family: "Work Sans", sans-serif;
 .main-exp-float p > span {
   font-size: 1.3rem;
 }
-.main-exp-box {
+.main-exp-container {
   height: auto;
   width: 555px;
   padding: 1.5rem;
@@ -187,13 +190,56 @@ font-family: "Work Sans", sans-serif;
   justify-content: center;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.088);
 }
-.main-exp-box h3 {
+.main-exp-container h3 {
   font-size: 20px;
   font-weight: 600;
 }
-.main-exp-box p {
+.main-exp-container p {
   opacity: 0.9;
   line-height: 1.5rem;
+}
+
+/* || facts-styles || */
+
+.main-facts {
+  width: 75%;
+  font-family: "Lexend", sans-serif;
+  margin: 2rem auto;
+}
+
+.main-facts > h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.main-facts p {
+  font-size: 20px;
+  line-height: 1.5rem;
+  opacity: 0.9;
+}
+
+.main-fact-area {
+  display: flex;
+  margin: 4rem auto;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.main-fact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  border: 1px solid #ff900e;
+  border-radius: 5px;
+  padding: 1.5rem 2rem;
+}
+.main-fact-container p {
+  font-size: 1.2rem;
 }
 
 /* || @media for Mobile-Device || */
@@ -255,7 +301,7 @@ font-family: "Work Sans", sans-serif;
   .main-experience-details > p {
     width: 100%;
   }
-  .main-exp-box {
+  .main-exp-container {
     height: auto;
     width: 100%;
   }
@@ -263,5 +309,19 @@ font-family: "Work Sans", sans-serif;
     left: -66px;
     margin-bottom: 2rem;
     transform: scale(0.75);
+  }
+
+  /* || facts-styles (@media) || */
+  .main-facts > h3 {
+    font-size: 2rem;
+  }
+  .main-facts p {
+    width: 100%;
+    font-size: 18px;
+  }
+  .main-fact-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
   }
 }
