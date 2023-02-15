@@ -15,7 +15,8 @@ font-family: "Work Sans", sans-serif;
 
 /* || header-styles || */
 .header {
-  height: 1280px;
+  height: 100%;
+  padding-bottom: 2rem;
   font-family: "Lexend", sans-serif;
   background-color: #ff8f0e15;
 }
@@ -64,6 +65,7 @@ font-family: "Work Sans", sans-serif;
 }
 .header-container img {
   width: 80%;
+  box-shadow: 0 0 20px #00000039;
 }
 .btn-primary {
   background-color: #ff900e;
@@ -76,19 +78,63 @@ font-family: "Work Sans", sans-serif;
   font-weight: 600;
   height: 50px;
   width: 180px;
+  transition: box-shadow 111ms ease-in-out;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 20px lightgrey;
+}
+
+/* || features-styles || */
+.main-features {
+  width: 75vw;
+  display: grid;
+  margin: 4rem auto;
+  align-items: center;
+  font-family: "Lexend", sans-serif;
+  grid-template-columns: repeat(2, 1fr);
+}
+.main-features-album {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  gap: 1rem;
+}
+.main-features-album img {
+  border-radius: 0.5rem;
+  width: 100%;
+  transition: box-shadow 1s ease-in-out;
+}
+.main-features-album img:hover {
+  box-shadow: 0 0 20px #00000036;
+}
+.main-features-details {
+  display: grid;
+  gap: 1rem;
+}
+.main-features-details h2 {
+  font-size: 3rem;
+}
+.main-features-details span {
+  color: #ff900e;
+}
+.main-features-details p {
+  font-size: 20px;
+  opacity: 0.9;
+  line-height: 2rem;
 }
 
 /* || @media for Mobile-Device || */
 @media screen and (max-width: 688px) {
-  .header {
-    height: 100%;
-    padding-bottom: 1rem;
-  }
+  /* || header-styles (@media) || */
   .header-nav {
     flex-direction: column;
     text-align: center;
     gap: 10px;
     align-items: center;
+  }
+  .header-nav ul {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(202, 202, 202);
   }
   .header-nav span {
     font-size: 2.2rem;
@@ -104,5 +150,28 @@ font-family: "Work Sans", sans-serif;
   }
   .header-container p {
     width: 80%;
+  }
+
+  .btn-primary {
+    font-size: 1.1rem;
+    font-weight: 600;
+    height: 2.7rem;
+    width: 10rem;
+  }
+
+  /* || features-styles (@media) || */
+  .main-features {
+    width: 80vw;
+    display: flex;
+    margin: 3rem auto;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .main-features-details h2 {
+    font-size: 2rem;
+  }
+  .main-features-details p {
+    font-size: 1rem;
+    line-height: normal;
   }
 }
