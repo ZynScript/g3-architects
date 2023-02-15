@@ -59,7 +59,7 @@ font-family: "Work Sans", sans-serif;
   font-weight: 800;
 }
 .header-container p {
-  font-size: 1rem;
+  font-size: 18px;
   opacity: 0.9;
   width: 50%;
 }
@@ -88,7 +88,7 @@ font-family: "Work Sans", sans-serif;
 .main-features {
   width: 75vw;
   display: grid;
-  margin: 4rem auto;
+  margin: 5rem auto;
   align-items: center;
   font-family: "Lexend", sans-serif;
   grid-template-columns: repeat(2, 1fr);
@@ -123,6 +123,79 @@ font-family: "Work Sans", sans-serif;
   line-height: 2rem;
 }
 
+/* || experience-styles || */
+.main-experience {
+  display: flex;
+  width: 75%;
+  font-family: "Lexend", sans-serif;
+  gap: 2rem;
+  margin: 5rem auto;
+}
+.main-experience-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.main-experience-details > h3 {
+  font-size: 2.5rem;
+  border-left: 5px solid #ff900e;
+  padding-left: 1.5rem;
+}
+.main-experience-details > p {
+  line-height: 1.5rem;
+  width: 80%;
+}
+.main-experience-architect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: scale(0.9);
+}
+.main-experience-architect img {
+  margin-bottom: -7rem;
+}
+.main-exp-float {
+  height: 111px;
+  width: 222px;
+  border-radius: 10px;
+  font-size: 2.3rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.9rem;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  top: 44px;
+  left: -66px;
+  justify-content: center;
+  background-color: #ff900e;
+}
+.main-exp-float p > span {
+  font-size: 1.3rem;
+}
+.main-exp-box {
+  height: auto;
+  width: 555px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.088);
+}
+.main-exp-box h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.main-exp-box p {
+  opacity: 0.9;
+  line-height: 1.5rem;
+}
+
 /* || @media for Mobile-Device || */
 @media screen and (max-width: 688px) {
   /* || header-styles (@media) || */
@@ -151,7 +224,6 @@ font-family: "Work Sans", sans-serif;
   .header-container p {
     width: 80%;
   }
-
   .btn-primary {
     font-size: 1.1rem;
     font-weight: 600;
@@ -173,5 +245,23 @@ font-family: "Work Sans", sans-serif;
   .main-features-details p {
     font-size: 1rem;
     line-height: normal;
+  }
+
+  /* ||experience-styles (@media) || */
+  .main-experience {
+    flex-direction: column-reverse;
+    width: 80%;
+  }
+  .main-experience-details > p {
+    width: 100%;
+  }
+  .main-exp-box {
+    height: auto;
+    width: 100%;
+  }
+  .main-exp-float {
+    left: -66px;
+    margin-bottom: 2rem;
+    transform: scale(0.75);
   }
 }
