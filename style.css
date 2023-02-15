@@ -200,31 +200,26 @@ font-family: "Work Sans", sans-serif;
 }
 
 /* || facts-styles || */
-
 .main-facts {
   width: 75%;
   font-family: "Lexend", sans-serif;
   margin: 2rem auto;
 }
-
 .main-facts > h3 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
-
 .main-facts p {
   font-size: 20px;
   line-height: 1.5rem;
   opacity: 0.9;
 }
-
 .main-fact-area {
   display: flex;
   margin: 4rem auto;
   justify-content: space-evenly;
   gap: 1rem;
 }
-
 .main-fact-container {
   display: flex;
   flex-direction: column;
@@ -240,6 +235,27 @@ font-family: "Work Sans", sans-serif;
 }
 .main-fact-container p {
   font-size: 1.2rem;
+}
+
+/* || main-styles || */
+.main-sponsors {
+  width: 75%;
+  margin: 3rem auto;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+}
+.main-sponsors h3 {
+  font-size: 3rem;
+}
+.main-sponsors p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+.main-sponsors-container {
+  display: flex;
+  filter: grayscale(100%);
+  justify-content: space-around;
 }
 
 /* || @media for Mobile-Device || */
@@ -323,5 +339,12 @@ font-family: "Work Sans", sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 2rem;
+  }
+
+  /* || main-styles (@media) || */
+  .main-sponsors-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
