@@ -1,22 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans+Condensed&family=Lexend&family=Open+Sans&family=Roboto&family=Work+Sans&display=swap");
 
-/* 
-font-family: "Lexend", sans-serif;
-font-family: "Open Sans", sans-serif;
-font-family: "Roboto", sans-serif;
-font-family: "Work Sans", sans-serif; 
-*/
-
 * {
   box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
   margin: 0;
   padding: 0;
 }
+
 /* || header-styles || */
 .header {
   height: 100%;
   padding-bottom: 2rem;
-  font-family: "Lexend", sans-serif;
   background-color: #ff8f0e15;
 }
 .header-nav {
@@ -72,7 +66,6 @@ font-family: "Work Sans", sans-serif;
   border: none;
   color: #fff;
   margin: 5px;
-  font-family: "Lexend", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   height: 50px;
@@ -89,7 +82,6 @@ font-family: "Work Sans", sans-serif;
   display: grid;
   margin: 5rem auto;
   align-items: center;
-  font-family: "Lexend", sans-serif;
   grid-template-columns: repeat(2, 1fr);
 }
 .main-features-album {
@@ -126,7 +118,6 @@ font-family: "Work Sans", sans-serif;
 .main-experience {
   display: flex;
   width: 75%;
-  font-family: "Lexend", sans-serif;
   gap: 2rem;
   margin: 5rem auto;
 }
@@ -200,7 +191,6 @@ font-family: "Work Sans", sans-serif;
 /* || facts-styles || */
 .main-facts {
   width: 75%;
-  font-family: "Lexend", sans-serif;
   margin: 2rem auto;
 }
 .main-facts > h3 {
@@ -230,7 +220,14 @@ font-family: "Work Sans", sans-serif;
   border: 1px solid #ff900e;
   border-radius: 5px;
   padding: 1.5rem 2rem;
+  transition: transform 555ms ease-in-out;
 }
+
+.main-fact-container:hover {
+  transform: rotateZ(20deg) scale(1.1);
+  box-shadow: 0 0 20px #d3d3d378;
+}
+
 .main-fact-container p {
   font-size: 1.2rem;
 }
@@ -240,7 +237,6 @@ font-family: "Work Sans", sans-serif;
   width: 75%;
   margin: 7rem auto;
   text-align: center;
-  font-family: "Lexend", sans-serif;
 }
 .main-sponsors h3 {
   font-size: 3rem;
@@ -257,12 +253,61 @@ font-family: "Work Sans", sans-serif;
   justify-content: space-around;
 }
 
-/* || footer-styles || */
-.footer {
-  font-family: "Lexend", sans-serif;
+/* || main-newsletter-styles || */
+.main-newsletter {
+  height: 333px;
+  width: 75%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  color: white;
+  margin: 5rem auto;
+  border-radius: 15px;
+  justify-content: space-around;
+  box-shadow: 0 0 20px lightgrey;
+  background: rgb(3, 2, 17);
+  background: linear-gradient(
+    90deg,
+    rgba(3, 2, 17, 1) 0%,
+    rgba(75, 81, 88, 1) 100%,
+    rgba(225, 225, 238, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.main-newsletter-details h3 {
+  font-size: 2.5rem;
+}
+.main-newsletter-input input {
+  height: 3rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  width: 18rem;
+}
+.main-newsletter-input input:focus {
+  outline: none;
+}
+.main-newsletter-input p {
+  margin-top: 10px;
+}
+.btn-subs {
+  padding: 0.8rem 1.5rem;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  background-color: tomato;
+  border: none;
+  border-radius: 5px;
+}
+.main-newsletter-input p a {
+  color: lightcyan;
+  text-decoration: none;
+}
+
+/* || footer-styles || */
+.footer {
+  align-items: center;
+  text-align: center;
   margin: 2rem auto;
   border-radius: 5px;
   width: 50%;
@@ -309,12 +354,19 @@ font-family: "Work Sans", sans-serif;
     flex-direction: column;
     gap: 2rem;
   }
+
+  .main-features-album {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    gap: 1rem;
+  }
   .main-features-details h2 {
     font-size: 2rem;
   }
   .main-features-details p {
     font-size: 1rem;
-    line-height: normal;
+    line-height: 1.5rem;
   }
 
   /* ||experience-styles (@media) || */
@@ -332,6 +384,7 @@ font-family: "Work Sans", sans-serif;
     height: auto;
     width: 100%;
   }
+
   .main-exp-float {
     left: -66px;
     margin-bottom: 3rem;
@@ -348,6 +401,7 @@ font-family: "Work Sans", sans-serif;
   }
   .main-fact-area {
     display: grid;
+    transform: scale(0.8);
     grid-template-columns: repeat(2, 1fr);
     margin-top: 2rem;
   }
@@ -355,8 +409,26 @@ font-family: "Work Sans", sans-serif;
   /* || sponsors-styles (@media) || */
   .main-sponsors-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+
+  /* || main-newsletter-styles (@media) || */
+  .main-newsletter {
+    width: 80%;
+    height: auto;
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+  .main-newsletter-details h3 {
+    text-align: center;
+    font-size: 4vw;
+  }
+  .main-newsletter-input {
+    text-align: center;
+    transform: scale(0.8);
+  }
+  .main-newsletter-input input {
+    margin: 10px 0;
   }
 
   /* || footer-styles (@media) || */
