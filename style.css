@@ -357,8 +357,8 @@
 
   .main-features-album {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
     gap: 1rem;
   }
   .main-features-details h2 {
@@ -371,7 +371,7 @@
 
   /* ||experience-styles (@media) || */
   .main-experience {
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 80%;
   }
   .main-experience-details > h3 {
@@ -387,7 +387,6 @@
 
   .main-exp-float {
     left: -66px;
-    margin-bottom: 3rem;
     transform: scale(0.75);
   }
 
@@ -407,6 +406,9 @@
   }
 
   /* || sponsors-styles (@media) || */
+  .main-sponsors {
+    margin-top: 0;
+  }
   .main-sponsors-container {
     display: grid;
     gap: 1.5rem;
@@ -425,12 +427,15 @@
   }
   .main-newsletter-input {
     text-align: center;
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   .main-newsletter-input input {
-    margin: 10px 0;
+    margin: 1rem 0;
   }
 
+  .main-newsletter-input p {
+    margin-top: 1rem;
+  }
   /* || footer-styles (@media) || */
   .footer {
     text-align: center;
